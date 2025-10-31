@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Privacy Policy - Kyutech BLE Attendance</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding: 1em;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      h2 {
+        margin-top: 2em;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5em;
+      }
+      ul {
+        margin: 0.5em 0 1em 1.5em;
+      }
+      .highlight {
+        background-color: #fff3cd;
+        padding: 1em;
+        border-left: 4px solid #ffc107;
+        margin: 1em 0;
+      }
+      .section {
+        margin-bottom: 2em;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Privacy Policy</h1>
+    <p><strong>Last Updated:</strong> October 31, 2025</p>
+    <p><strong>Effective Date:</strong> October 31, 2025</p>
+
+    <div class="section">
+      <h2>1. Introduction</h2>
+      <p>
+        This privacy policy applies to the
+        <strong>Kyutech BLE Attendance</strong> mobile application (hereby
+        referred to as "Application") for iOS and Android devices, created by
+        <strong>野崎愛斗 (Aito Nozaki)</strong> (hereby referred to as "Service
+        Provider") as a free service for educational attendance tracking
+        purposes.
+      </p>
+      <p>
+        This service is provided "AS IS" and is intended for use by students and
+        faculty of educational institutions, specifically Kyushu Institute of
+        Technology.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>2. Information Collection and Use</h2>
+
+      <h3>2.1 Automatically Collected Information</h3>
+      <p>
+        The Application automatically collects the following information when
+        you download, install, and use it:
+      </p>
+      <ul>
+        <li>
+          <strong>Device Information:</strong> Operating system type and
+          version, device model
+        </li>
+        <li>
+          <strong>Network Information:</strong> Your device's Internet Protocol
+          (IP) address
+        </li>
+        <li>
+          <strong>Usage Data:</strong> Pages visited within the Application,
+          time and date of visits, time spent on pages and in the Application
+        </li>
+      </ul>
+
+      <h3>2.2 Location Information</h3>
+      <div class="highlight">
+        <p>
+          <strong>⚠️ Background Location Tracking:</strong> This Application
+          collects and uses precise location data continuously, even when the
+          app is closed or not actively in use.
+        </p>
+      </div>
+
+      <p>
+        The Application collects your device's precise location for the
+        following purposes:
+      </p>
+      <ul>
+        <li>
+          <strong>Geofencing Services:</strong> Automatic detection when you
+          enter or exit the designated university area (Kyushu Institute of
+          Technology campus: latitude 33.6038, longitude 130.6952, radius 200
+          meters)
+        </li>
+        <li>
+          <strong>Background Monitoring:</strong> Continuous monitoring while
+          your device is within or near the geofenced area, operating even when
+          the app is not open
+        </li>
+        <li>
+          <strong>Periodic Verification:</strong> Background checks performed
+          every 15 minutes while inside the monitored area to verify continued
+          presence
+        </li>
+        <li>
+          <strong>Attendance Logging:</strong> Automatic recording of entry and
+          exit timestamps for attendance verification
+        </li>
+      </ul>
+
+      <h3>2.3 Bluetooth Information</h3>
+      <p>The Application uses Bluetooth Low Energy (BLE) technology to:</p>
+      <ul>
+        <li>
+          <strong>Beacon Scanning:</strong> Continuously scan for nearby BLE
+          beacons inside classroom areas
+        </li>
+        <li>
+          <strong>Device Connection:</strong> Connect to specific attendance
+          verification devices using Service UUID
+          <code>0000180a-0000-1000-8000-00805f9b34fb</code>
+        </li>
+        <li>
+          <strong>Presence Confirmation:</strong> Verify your physical presence
+          within designated classroom locations
+        </li>
+        <li>
+          <strong>Background Operation:</strong> BLE scanning continues in the
+          background when you are inside the geofenced area
+        </li>
+      </ul>
+
+      <h3>2.4 User Identification</h3>
+      <p>The Application collects and processes:</p>
+      <ul>
+        <li>
+          <strong>User ID:</strong> A unique identifier associated with your
+          student or faculty account
+        </li>
+        <li>
+          <strong>Attendance Records:</strong> Entry and exit timestamps,
+          location status, and BLE connection events
+        </li>
+      </ul>
+
+      <h3>2.5 Local Storage</h3>
+      <p>The Application stores the following information on your device:</p>
+      <ul>
+        <li>
+          App state (<code>OUTSIDE_AREA</code>, <code>INSIDE_AREA</code>,
+          <code>UNCONFIRMED</code>, <code>CONFIRMED</code>)
+        </li>
+        <li>Temporary attendance data before server transmission</li>
+        <li>BLE connection history and status</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>3. Automated Data Processing</h2>
+      <p>
+        <strong>Important:</strong> This Application performs automated
+        attendance recording without requiring manual user confirmation:
+      </p>
+      <ul>
+        <li>
+          <strong>Automatic Entry Recording:</strong> When you enter the
+          geofenced area, the app automatically sends an entry notification to
+          our servers
+        </li>
+        <li>
+          <strong>Automatic Exit Recording:</strong> When you leave the
+          geofenced area, the app automatically sends an exit notification
+        </li>
+        <li>
+          <strong>Automatic BLE Scanning:</strong> The app periodically
+          initiates BLE scans in the background to verify classroom presence
+        </li>
+        <li>
+          <strong>Automatic Status Updates:</strong> App state changes trigger
+          automatic API calls without user interaction
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>4. Data Transmission and Storage</h2>
+
+      <h3>4.1 Server Communication</h3>
+      <p>Your attendance data is transmitted to our secure server:</p>
+      <ul>
+        <li>
+          <strong>Server Location:</strong> <code>kyutech-4lab.jp</code> (hosted
+          by Render.com)
+        </li>
+        <li>
+          <strong>Data Transmitted:</strong> User ID, entry/exit timestamps,
+          location status, BLE connection events
+        </li>
+        <li>
+          <strong>Transmission Frequency:</strong>
+          <ul>
+            <li>Upon entering the geofenced area</li>
+            <li>Upon exiting the geofenced area</li>
+            <li>
+              During periodic background verification checks (every 15 minutes)
+            </li>
+            <li>Upon BLE beacon connection/disconnection</li>
+          </ul>
+        </li>
+        <li><strong>Protocol:</strong> HTTPS encrypted connections</li>
+      </ul>
+
+      <h3>4.2 API Endpoints</h3>
+      <p>The Application communicates with the following endpoints:</p>
+      <ul>
+        <li>
+          <code>POST https://kyutech-a.onrender.com/api/attendance/enter</code>
+          - Entry recording
+        </li>
+        <li>
+          <code>POST https://kyutech-a.onrender.com/api/attendance/exit</code> -
+          Exit recording
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>5. Third-Party Services</h2>
+      <p>
+        The Application utilizes the following third-party services that may
+        collect information:
+      </p>
+      <ul>
+        <li>
+          <strong
+            ><a
+              href="https://expo.io/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Expo</a
+            >:</strong
+          >
+          Development platform and SDK
+        </li>
+        <li>
+          <strong
+            ><a
+              href="https://render.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Render</a
+            >:</strong
+          >
+          Backend hosting service
+        </li>
+      </ul>
+
+      <p>
+        The Application also uses the following libraries (which do not collect
+        personal data independently):
+      </p>
+      <ul>
+        <li>
+          <code>react-native-ble-plx</code>: Bluetooth Low Energy functionality
+        </li>
+        <li>
+          <code>react-native-background-fetch</code>: Background task scheduling
+        </li>
+        <li><code>expo-location</code>: Location services</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>6. Educational Use and Data Sharing</h2>
+      <p>
+        This Application is designed for educational attendance tracking
+        purposes. However, it is important to note:
+      </p>
+      <ul>
+        <li>
+          <strong>Independent Service:</strong> This Application is developed
+          and operated independently by the Service Provider and is not an
+          official system of any educational institution
+        </li>
+        <li>
+          <strong>Voluntary Use:</strong> Use of this Application is voluntary
+          and does not replace official institutional attendance systems
+        </li>
+        <li>
+          <strong>Data Sharing:</strong> Attendance data may be shared with:
+          <ul>
+            <li>
+              Course instructors or teaching assistants (with your consent)
+            </li>
+            <li>
+              Educational institution administrators (only upon explicit request
+              or legal requirement)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>No Official Record:</strong> Data collected by this
+          Application may not constitute an official academic record unless
+          explicitly accepted by your institution
+        </li>
+        <li>
+          <strong>User Responsibility:</strong> You are responsible for ensuring
+          compliance with your institution's attendance policies
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>7. Data Retention and Deletion</h2>
+
+      <h3>7.1 Retention Period</h3>
+      <p>The Service Provider will retain your data for:</p>
+      <ul>
+        <li>
+          <strong>Server Data:</strong>
+          <ul>
+            <li>
+              Current semester attendance records: Duration of the academic term
+            </li>
+            <li>
+              Historical records: 5 years after graduation or withdrawal from
+              the institution
+            </li>
+            <li>
+              Rationale: Compliance with Japanese academic record-keeping
+              standards and potential academic appeals
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Local Device Data:</strong> Until you uninstall the
+          Application or manually clear app data through device settings
+        </li>
+        <li>
+          <strong>Anonymized Analytics:</strong> Aggregated usage statistics may
+          be retained indefinitely for research and improvement purposes
+        </li>
+      </ul>
+
+      <h3>7.2 Data Deletion Rights</h3>
+      <p>
+        You have the right to request deletion of your data. To request
+        deletion:
+      </p>
+      <ol>
+        <li>
+          Send an email to
+          <a href="mailto:yeqiaidou07@gmail.com">yeqiaidou07@gmail.com</a> with
+          "Data Deletion Request" in the subject line
+        </li>
+        <li>
+          Include your User ID and confirmation that you wish to delete all
+          attendance records
+        </li>
+        <li>
+          The Service Provider will respond within a reasonable time (typically
+          30 days)
+        </li>
+      </ol>
+      <p>
+        <strong>Note:</strong> Deletion requests may be subject to legal or
+        institutional record-keeping requirements.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>8. Your Rights and Choices</h2>
+
+      <h3>8.1 Opt-Out and Location Control</h3>
+      <p>
+        You can control or stop location data collection through your device
+        settings:
+      </p>
+
+      <p><strong>iOS:</strong></p>
+      <ol>
+        <li>Open Settings → Privacy & Security → Location Services</li>
+        <li>Find "Kyutech BLE" and select:</li>
+        <ul>
+          <li><strong>Never:</strong> Completely disable location tracking</li>
+          <li>
+            <strong>While Using the App:</strong> Enable only when app is open
+            (disables background tracking)
+          </li>
+          <li>
+            <strong>Always:</strong> Full functionality with background tracking
+          </li>
+        </ul>
+      </ol>
+
+      <p><strong>Android:</strong></p>
+      <ol>
+        <li>Open Settings → Apps → Kyutech BLE → Permissions</li>
+        <li>Tap "Location" and select:</li>
+        <ul>
+          <li>
+            <strong>Don't allow:</strong> Completely disable location tracking
+          </li>
+          <li>
+            <strong>Allow only while using the app:</strong> Enable only when
+            app is open
+          </li>
+          <li>
+            <strong>Allow all the time:</strong> Full functionality with
+            background tracking
+          </li>
+        </ul>
+      </ol>
+
+      <div class="highlight">
+        <p>
+          <strong>⚠️ Important:</strong> Disabling background location or
+          Bluetooth will prevent automatic attendance tracking. You may not
+          receive attendance credit without these permissions enabled.
+        </p>
+      </div>
+
+      <h3>8.2 Complete Opt-Out</h3>
+      <p>
+        You can stop all data collection by uninstalling the Application using
+        your device's standard uninstall process.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>9. Security</h2>
+      <p>
+        The Service Provider is committed to protecting your information and
+        employs:
+      </p>
+      <ul>
+        <li>
+          <strong>Encryption in Transit:</strong> HTTPS/TLS for all server
+          communications
+        </li>
+        <li>
+          <strong>Physical Safeguards:</strong> Secure server infrastructure
+          through third-party hosting provider
+        </li>
+        <li>
+          <strong>Access Controls:</strong> Limited access to attendance data
+          for authorized personnel only
+        </li>
+        <li>
+          <strong>Regular Updates:</strong> Ongoing security patches and updates
+          to the Application
+        </li>
+      </ul>
+      <p>
+        However, no method of electronic transmission or storage is 100% secure.
+        While we strive to protect your information, we cannot guarantee
+        absolute security.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>10. Children's Privacy</h2>
+      <p>
+        This Application is intended for use by students who may be under 18
+        years of age but typically above 13 years of age in educational
+        settings.
+      </p>
+      <p>
+        The Service Provider does not knowingly collect personally identifiable
+        information from children under 13 years of age without verifiable
+        parental consent. If you are a parent or guardian and believe your child
+        under 13 has provided personal information, please contact us at
+        <a href="mailto:yeqiaidou07@gmail.com">yeqiaidou07@gmail.com</a>, and we
+        will promptly delete such information.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>11. Disclosure of Information</h2>
+      <p>The Service Provider may disclose your information:</p>
+      <ul>
+        <li>
+          <strong>Legal Compliance:</strong> As required by law, court order,
+          subpoena, or similar legal process
+        </li>
+        <li>
+          <strong>Rights Protection:</strong> To protect the rights, property,
+          or safety of the Service Provider, users, or others
+        </li>
+        <li>
+          <strong>Fraud Investigation:</strong> To investigate suspected fraud
+          or security breaches
+        </li>
+        <li>
+          <strong>Government Requests:</strong> In response to lawful government
+          or law enforcement requests
+        </li>
+        <li>
+          <strong>Educational Institution:</strong> With authorized staff of
+          your educational institution for attendance verification purposes
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>12. Geographical Scope and Data Transfers</h2>
+      <p>
+        <strong>Service Area:</strong> This Application is designed for use
+        exclusively within Japan, specifically at Kyushu Institute of Technology
+        campus locations.
+      </p>
+      <ul>
+        <li>
+          <strong>Target Users:</strong> Students, faculty, and staff physically
+          present in Japan
+        </li>
+        <li>
+          <strong>Server Location:</strong> Data is processed on servers
+          operated by Render.com, which may be located in various regions but
+          primarily serves the Asia-Pacific area
+        </li>
+        <li>
+          <strong>GDPR Status:</strong> This Application does not target or
+          serve individuals residing in the European Union. If you are an EU
+          resident, please do not use this Application
+        </li>
+        <li>
+          <strong>Japanese Law:</strong> Data processing is governed primarily
+          by Japan's Act on the Protection of Personal Information
+          (個人情報保護法)
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>13. Changes to This Privacy Policy</h2>
+      <p>
+        This Privacy Policy may be updated periodically for any reason. The
+        Service Provider will notify you of changes by:
+      </p>
+      <ul>
+        <li>Updating the "Last Updated" date at the top of this policy</li>
+        <li>Posting the new policy at this location</li>
+        <li>
+          Sending an in-app notification for material changes (if applicable)
+        </li>
+      </ul>
+      <p>
+        You are advised to review this Privacy Policy periodically. Continued
+        use of the Application after changes constitutes acceptance of the
+        updated policy.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>14. Your Consent</h2>
+      <p>
+        By downloading, installing, or using the Application, you consent to:
+      </p>
+      <ul>
+        <li>
+          The collection and use of your information as described in this
+          Privacy Policy
+        </li>
+        <li>
+          Background location tracking while the app is installed on your device
+        </li>
+        <li>
+          Automated attendance recording based on geofencing and BLE proximity
+        </li>
+        <li>Transmission of your attendance data to our servers</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>15. Contact Information</h2>
+      <p>
+        If you have questions, concerns, or requests regarding this Privacy
+        Policy or your personal data, please contact:
+      </p>
+      <p>
+        <strong>Service Provider:</strong> 野崎愛斗 (Aito Nozaki)<br />
+        <strong>Email:</strong>
+        <a href="mailto:yeqiaidou07@gmail.com">yeqiaidou07@gmail.com</a><br />
+        <strong>Response Time:</strong> We aim to respond to all inquiries
+        within 30 days
+      </p>
+    </div>
+
+    <hr style="margin: 3em 0" />
+
+    <div style="font-size: 0.9em; color: #666; text-align: center">
+      <p>
+        This privacy policy was generated with assistance from
+        <a
+          href="https://app-privacy-policy-generator.nisrulz.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >App Privacy Policy Generator</a
+        >
+        and customized for this specific application.
+      </p>
+      <p>© 2025 野崎愛斗 (Aito Nozaki). All rights reserved.</p>
+    </div>
+  </body>
+</html>
